@@ -55,7 +55,7 @@ class SecurePasswordManager:
     def encrypt_data(self, data, key):
         """Cifra los datos usando AES-256-GCM"""
         # Generar IV aleatorio
-        iv = os.urandom(selft.IV_LENGTH)  # 96 bits para GCM
+        iv = os.urandom(self.IV_LENGTH)  # 96 bits para GCM
         
         # Crear cipher
         cipher = Cipher(
